@@ -13,9 +13,10 @@ public class thief : Villager
     }
     protected override void Attack()
     {
-        destination = transform.position;
         base.Attack();
         Instantiate(dagger, spawn.position, spawn.rotation);
         Instantiate(dagger, spawn.position, spawn.rotation);
+        destination = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
     }
 }
