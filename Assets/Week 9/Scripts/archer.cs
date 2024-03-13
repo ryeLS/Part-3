@@ -6,4 +6,10 @@ public class archer : Villager
 {
     public GameObject arrowFAB;
     public Transform spawn;
+    protected override void Attack()
+    {
+        destination = transform.position;
+        base.Attack();
+        Instantiate(arrowFAB, spawn.position, spawn.rotation);
+    }
 }
