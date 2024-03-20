@@ -18,7 +18,6 @@ public class building : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
         //call coroutine heere
         StartCoroutine(Build());
     }
