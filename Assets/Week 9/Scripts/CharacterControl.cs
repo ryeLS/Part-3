@@ -8,11 +8,13 @@ using UnityEngine.UI;
 
 public class CharacterControl : MonoBehaviour
 {
+    public TMP_Dropdown dropdown;
     public TextMeshProUGUI className;
     public ChestType type;
     public static CharacterControl Instance;
     public static Villager SelectedVillager { get; private set; }
     public static string namey;
+    public ArrayList villagers = new ArrayList();
 
     public static void SetSelectedVillager(Villager villager)
     {
@@ -29,7 +31,14 @@ public class CharacterControl : MonoBehaviour
     {
         //namey = "Not Selected";
         Instance = this;
+        //DropdownPicker();
     }
+    //void DropdownPicker(Int32 value)
+    //{
+        //if (dropdown.options[1]){
+            //something like this then say selected = thief etc
+       // }
+    //}
 
 
 }
