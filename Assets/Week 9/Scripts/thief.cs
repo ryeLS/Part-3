@@ -9,13 +9,18 @@ public class thief : Villager
     public GameObject dagger;
     public Transform spawn;
     //public float timer;
+    Coroutine Dashing;
     public override ChestType CanOpen()
     {
         return ChestType.Thief;
     }
     protected override void Attack()
     {
-        StartCoroutine(dash());
+        if(Dashing != null)
+        {
+            StopCoroutine(Dashing);
+        }
+        Dashing = StartCoroutine(dash());
 
     }
     IEnumerator dash()
