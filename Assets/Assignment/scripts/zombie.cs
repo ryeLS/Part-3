@@ -9,12 +9,18 @@ public class zombie : MonoBehaviour
 {
     protected float speed = 3f;
     public float chances = 5;
+    public player other;
+    public GameObject spawn;
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
-
+    private void Awake()
+    {
+        spawn = GameObject.Find("Player");
+        other = spawn.GetComponent<player>();
+    }
     // Update is called once per frame
     protected virtual void Update()
     {
@@ -23,13 +29,14 @@ public class zombie : MonoBehaviour
         if (screenPosition.x < -25)
         {
             Debug.Log("haha");
-            chances = chances - 1;
+            //chances = chances - 1;
+            other.HitTaken();
             Destroy(gameObject);
         }
-        if(chances <= 0)
+        /*if(chances <= 0)
         {
             Debug.Log("You done.");
-        }
+        }*/
     }
     protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
