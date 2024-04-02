@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class player : MonoBehaviour
 {
-    float speed = 3;
+    float speed = 6f;
     Rigidbody2D rb;
     Vector2 destination;
     Vector2 movement;
     public GameObject pewpew;
     public float health = 5;
+    static player Instance;
     // Start is called before the first frame update
     void Start()
     {
+        
         rb =GetComponent<Rigidbody2D>();
     }
     private void FixedUpdate()

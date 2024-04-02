@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class zombiespawner : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public GameObject zombie;
     void Start()
     {
-        
+        StartCoroutine(StaggeredSpawn());
     }
-
-    // Update is called once per frame
-    void Update()
+    IEnumerator StaggeredSpawn()
     {
-        
+        while (true)
+        {
+            yield return new WaitForSeconds(3f);
+            spawnObject();
+        }
+    }
+    void spawnObject()
+    {
+        float randomY = Random.Range(-10f, 5f);
+        Vector2 spawnPosition = new Vector2(transform.position.x, randomY);
+        Instantiate(zombie, spawnPosition, Quaternion.identity);
     }
 }
