@@ -5,7 +5,7 @@ using UnityEngine;
 //Mini Zombie - https://opengameart.org/content/mini-zombie
 //Zombie - https://opengameart.org/content/zombie-character
 //Player - https://opengameart.org/content/2d-hero-guy-character
-public class zombie : MonoBehaviour
+public class zombie : MonoBehaviour //parent class
 {
     protected float speed = 3f;
     public float chances = 5;

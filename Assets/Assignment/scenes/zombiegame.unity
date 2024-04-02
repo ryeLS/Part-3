@@ -340,7 +340,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68a5fd1e3660f4bb9bd952a204abe9d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zombie: {fileID: 5048950582909446508, guid: 7e3203d13e5584d31afa152a870e94cd, type: 3}
+  minizombie: {fileID: 1483689023738319723, guid: 15faccb73c93b4291acdcaedea99a3b2, type: 3}
+  bigzombie: {fileID: 5048950582909446508, guid: 7e3203d13e5584d31afa152a870e94cd, type: 3}
 --- !u!1 &1787813613
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class player : MonoBehaviour
 {
-    float speed = 6f;
+    float speed = 7f;
     Rigidbody2D rb;
     Vector2 destination;
     Vector2 movement;
@@ -32,7 +32,6 @@ public class player : MonoBehaviour
         if(movement.magnitude < 0.1)
         {
             movement = Vector2.zero;
-            speed = 3;
         }
         if(movement.magnitude < 0.1)
         {
