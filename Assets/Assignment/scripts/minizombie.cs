@@ -13,7 +13,7 @@ public class minizombie : zombie //child class
     // Update is called once per frame
     protected override void Update()
     {
-        speed = 6f;
+        speed = 8f;
         transform.Translate(Vector3.left * speed * Time.deltaTime);
         Vector2 screenPosition = Camera.main.WorldToScreenPoint(transform.position);
         if (screenPosition.x < -25)

@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 public class player : MonoBehaviour
 {
     float speed = 7f;
@@ -9,12 +10,14 @@ public class player : MonoBehaviour
     Vector2 destination;
     Vector2 movement;
     public GameObject pewpew;
-    public float health = 5;
+    public float healthbar;
     public Transform spawn;
+    public float maxhealth = 5;
+  
     // Start is called before the first frame update
     void Start()
     {
-        
+        healthbar = maxhealth;
         rb =GetComponent<Rigidbody2D>();
     }
     private void FixedUpdate()
@@ -53,8 +56,14 @@ public class player : MonoBehaviour
     }
     public void HitTaken(float damage)
     {
-        //float damage = 1;
-        health -= damage;
+        healthbar -= damage;
+        Debug.Log("yeah");
+        if(healthbar <= 0)
+        {
+            int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+            int nextSceneIndex = (currentSceneIndex + 1) % SceneManager.sceneCountInBuildSettings;
+            SceneManager.LoadScene(nextSceneIndex);
+        }
     }
     public void Shoot()
     {

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class bigzombie : zombie
 {
+    public GameObject normalzombie;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,11 +21,16 @@ public class bigzombie : zombie
         {
             Debug.Log("haha");
             other.HitTaken(2);
+            spawnSmaller();
             Destroy(gameObject);
         }
     }
     protected override void OnTriggerEnter2D(Collider2D collision)
     {
         collision.gameObject.SendMessage("HitTaken", 2, SendMessageOptions.DontRequireReceiver);
+    }
+    protected void spawnSmaller()
+    {
+        Instantiate(normalzombie, transform.position, Quaternion.identity);
     }
 }

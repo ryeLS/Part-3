@@ -50,6 +50,7 @@ MonoBehaviour:
   chances: 5
   other: {fileID: 0}
   spawn: {fileID: 0}
+  normalzombie: {fileID: 5048950582909446508, guid: 7e3203d13e5584d31afa152a870e94cd, type: 3}
 --- !u!212 &6799188615748843942
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -90,7 +91,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 573aee450708b4ac1b5a9e837edb49f1, type: 3}
   m_Color: {r: 0.33521718, g: 0.53127366, b: 0.8773585, a: 1}
   m_FlipX: 1

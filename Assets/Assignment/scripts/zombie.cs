@@ -6,9 +6,10 @@ using UnityEngine;
 //Zombie - https://opengameart.org/content/zombie-character
 //Player - https://opengameart.org/content/2d-hero-guy-character
 //Bullet - https://kenney.nl/assets/space-shooter-extension
+//grass - https://stock.adobe.com/ca/images/cartoon-grass-vector-flat-pattern/432352914?prev_url=detail
 public class zombie : MonoBehaviour //parent class
 {
-    protected float speed = 3f;
+    protected float speed = 4f;
     public float chances = 5;
     public player other;
     public GameObject spawn;
