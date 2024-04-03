@@ -10,6 +10,7 @@ public class player : MonoBehaviour
     Vector2 movement;
     public GameObject pewpew;
     public float health = 5;
+    public Transform spawn;
     // Start is called before the first frame update
     void Start()
     {
@@ -45,10 +46,20 @@ public class player : MonoBehaviour
         {
             destination = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         }
+        if (Input.GetMouseButtonDown(1)) //if mouse clicked then player move to clicked location
+        {
+            Shoot();
+        }
     }
-    public void HitTaken()
+    public void HitTaken(float damage)
     {
-        float damage = 1;
+        //float damage = 1;
         health -= damage;
+    }
+    public void Shoot()
+    {
+        destination = transform.position;
+        transform.localScale = new Vector3(1, 1, 1);
+        Instantiate(pewpew, spawn.position, Quaternion.identity);
     }
 }

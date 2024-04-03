@@ -123,6 +123,37 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &475625167
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 475625168}
+  m_Layer: 0
+  m_Name: bulletspawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &475625168
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 475625167}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 2.36, y: -0.93, z: -0.24971178}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 990868945}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!1 &990868943
 GameObject:
   m_ObjectHideFlags: 0
@@ -207,7 +238,8 @@ Transform:
   m_LocalPosition: {x: -4.47, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 475625168}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &990868946
@@ -294,8 +326,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22fdf0030e509492a98ac6afc1ad05d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pewpew: {fileID: 0}
+  pewpew: {fileID: 3118281460871340104, guid: 8653e9004384f47a0ac32b04c9ebaac9, type: 3}
   health: 5
+  spawn: {fileID: 475625168}
 --- !u!1 &1301695729
 GameObject:
   m_ObjectHideFlags: 0
@@ -322,7 +355,7 @@ Transform:
   m_GameObject: {fileID: 1301695729}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.66, y: -0.46, z: -0.51889133}
+  m_LocalPosition: {x: 19.26, y: -0.33, z: -0.51889133}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -341,7 +374,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minizombie: {fileID: 1483689023738319723, guid: 15faccb73c93b4291acdcaedea99a3b2, type: 3}
-  bigzombie: {fileID: 5048950582909446508, guid: 7e3203d13e5584d31afa152a870e94cd, type: 3}
+  zombie: {fileID: 5048950582909446508, guid: 7e3203d13e5584d31afa152a870e94cd, type: 3}
+  bigzombie: {fileID: 3193206084320202401, guid: 0efb147017cc14d6bb61116c2f2a4476, type: 3}
 --- !u!1 &1787813613
 GameObject:
   m_ObjectHideFlags: 0

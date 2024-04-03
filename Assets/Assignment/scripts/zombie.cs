@@ -5,6 +5,7 @@ using UnityEngine;
 //Mini Zombie - https://opengameart.org/content/mini-zombie
 //Zombie - https://opengameart.org/content/zombie-character
 //Player - https://opengameart.org/content/2d-hero-guy-character
+//Bullet - https://kenney.nl/assets/space-shooter-extension
 public class zombie : MonoBehaviour //parent class
 {
     protected float speed = 3f;
@@ -30,7 +31,7 @@ public class zombie : MonoBehaviour //parent class
         {
             Debug.Log("haha");
             //chances = chances - 1;
-            other.HitTaken();
+            other.HitTaken(1);
             Destroy(gameObject);
         }
         /*if(chances <= 0)
@@ -41,5 +42,9 @@ public class zombie : MonoBehaviour //parent class
     protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
         collision.gameObject.SendMessage("HitTaken", 1, SendMessageOptions.DontRequireReceiver);
+    }
+    public void defeated()
+    {
+        Destroy(gameObject);
     }
 }
